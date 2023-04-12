@@ -23,7 +23,7 @@ public class CalculatorController {
         return calculatorService.hello();
     }
     @GetMapping("/add")
-    public int add(@RequestParam int num1, @RequestParam int num2){
+    public int add(@RequestParam(required = false) int num1, @RequestParam(required = false) int num2){
         return calculatorService.add(num1,num2);
     }
     @GetMapping("/minus")
